@@ -28,5 +28,4 @@ this.domElement.classList.toggle('article-open');
 
 */
 
-let articles = document.querySelectorAll('.article');
-articles.forEach(domElement => new Article(domElement))
+let articles = document.querySelectorAll('.article').forEach(domElement => new Article(domElement))
