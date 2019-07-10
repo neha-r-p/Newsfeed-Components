@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Neha is the best',
+    date: 'September 23, 1987',
+    firstParagraph: `Neha was born today, and she is awesome.`,
+
+    secondParagraph: `She is too nice to take over the world though, don't worrry!`,
+
+    thirdParagraph: `She'll just take over the chocolate and cheese industries.`
   }
 ];
  const articles = document.querySelector('.articles');
@@ -142,7 +151,6 @@ data.forEach(data => {
     expandBtn.addEventListener('click', event => {
       article.classList.toggle('article-open');
     })
-
 
 
     return article;
