@@ -16,6 +16,7 @@ let menuItems = [
   <div class="menu">
     <ul>
       {each menu item as a list item}
+      <li>
     </ul>
   </div>
 
@@ -33,3 +34,15 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+ function createMenu(){
+   //define new elements
+   const menu = document.createElement('div');
+   const menuList = document.createElement('ul');
+   const menuItem = document.createElement('li');
+
+   //set up structure of elements
+   menu.appendChild('menuList');
+   menuList.appendChild('menuItem');
+   
+
+ }
