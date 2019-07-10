@@ -87,6 +87,10 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
+ const articles = document.querySelector('.articles');
+data.forEach(data => {
+  articles.appendChild(createArticle());
+})
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
@@ -101,8 +105,42 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each peice of the data object above.
+  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each peice of the data object above.*/
 
+  function createArticle(){
+    //define new elements
+    const article = document.createElement('div');
+    const articleTitle = document.createElement('h2');
+    const articleDate = document.createElement('p')
+    const paragraphOne = document.createElement('p');
+    const paragraphTwo = document.createElement('p');
+    const paragraphThree = document.createElement('p');
+    const expandBtn = document.createElement('span');
+
+    //set up structure of elements
+    article.appendChild(articleTitle);
+    article.appendChild(articleDate);
+    article.appendChild(paragraphOne);
+    article.appendChild(paragraphTwo);
+    article.appendChild(paragraphThree);
+    article.appendChild(expandBtn);
+
+    //set class names
+    article.classList.add('article');
+    articleDate.classList.add('date');
+    expandBtn.classList.add('expandButton');
+
+    //set text content
+    articleTitle.textContent = ''
+
+    expandBtn.textContent = 'Expand';
+
+
+
+    return article;
+  }
+
+/*
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
   Step 3: return the entire component.
