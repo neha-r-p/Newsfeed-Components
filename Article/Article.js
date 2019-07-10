@@ -89,7 +89,7 @@ const data = [
 ];
  const articles = document.querySelector('.articles');
 data.forEach(data => {
-  articles.appendChild(createArticle());
+  articles.appendChild(createArticle(data));
 })
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
@@ -107,7 +107,7 @@ data.forEach(data => {
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each peice of the data object above.*/
 
-  function createArticle(){
+  function createArticle(data){
     //define new elements
     const article = document.createElement('div');
     const articleTitle = document.createElement('h2');
@@ -131,9 +131,17 @@ data.forEach(data => {
     expandBtn.classList.add('expandButton');
 
     //set text content
-    articleTitle.textContent = ''
-
+    articleTitle.textContent = `${data.title}`
+    articleDate.textContent = `${data.date}`
+    paragraphOne.textContent = `${data.firstParagraph}`
+    paragraphTwo.textContent = `${data.secondParagraph}`
+    paragraphThree.textContent = `${data.thirdParagraph}`
     expandBtn.textContent = 'Expand';
+
+    //button event
+    expandBtn.addEventListener('click', event => {
+      article.classList.toggle('article-open');
+    })
 
 
 
